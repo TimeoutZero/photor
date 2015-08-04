@@ -11,10 +11,10 @@ angular.module 'Photor'
   .config ($stateProvider, $urlRouterProvider) ->
 
     $stateProvider
-      .state "/timer",
-        url         : "timer"
+      .state "timer",
+        url         : "/timer"
         templateUrl : "app/features/timer/templates/main.html"
-        controller  : ($scope) ->
+        controller  : 'MainTimerController'
 
 
     $urlRouterProvider.otherwise '/timer'
