@@ -6,8 +6,8 @@ var wrench = require('wrench');
 
 var options = {
   src: 'src',
-  dist: '../server/src/main/resources/static',
-  tmp: 'www',
+  dist: 'www',
+  tmp: 'dev',
   e2e: 'e2e',
   srcEnv  : 'dev/serve/app/project/scripts/environment',
   distEnv : '../server/src/main/resources/static/',
