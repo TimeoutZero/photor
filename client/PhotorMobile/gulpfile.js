@@ -10,7 +10,7 @@ var options = {
   tmp: 'dev',
   e2e: 'e2e',
   srcEnv  : 'dev/serve/app/project/scripts/environment',
-  distEnv : '../server/src/main/resources/static/',
+  distEnv : 'www',
   errorHandler: function(title) {
     return function(err) {
       gutil.log(gutil.colors.red('[' + title + ']'), err.toString());
