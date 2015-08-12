@@ -92,7 +92,7 @@ angular.module "timeoutzeroMap.services"
         return new google.maps.LatLng(lat, lng)
 
       setEvent : (eventName, cb) ->
-        google.maps.event.addListener(map, eventName, cb)
+        google.maps.event.addDomListener(map, eventName, cb)
 
     }
 
