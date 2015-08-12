@@ -13,6 +13,7 @@ angular.module 'Photor.vendors' , [
   'ngSanitize'
   'ngResource'
   'ionic'
+  'ngCordova'
 ]
 
 # =============================================
