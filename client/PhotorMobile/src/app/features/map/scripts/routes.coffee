@@ -11,7 +11,9 @@ angular.module 'Photor'
   .config ($stateProvider, $urlRouterProvider) ->
 
     $stateProvider
-      .state "map",
+      .state "pocs.map",
         url         : "/map"
-        templateUrl : "app/features/map/templates/main.html"
-        controller  : 'MapController'
+        views:
+          'map':
+            templateUrl : "app/features/map/templates/main.html"
+            controller  : 'MapController'

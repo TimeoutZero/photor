@@ -10,15 +10,11 @@ angular.module 'Photor'
   # =============================================
   .config ($stateProvider, $urlRouterProvider) ->
 
-
     $stateProvider
-      .state "pocs.oauth",
-        url         : "/OAuth"
-        views:
-          'oAuth':
-            templateUrl : "app/features/OAuth/templates/main.html"
-            controller  : 'MainOAuthController'
-
+      .state "pocs",
+        url         : "/pocs"
+        abstract    : yes
+        templateUrl : "app/features/pocTabs/main.html"
 
 
     # $urlRouterProvider.otherwise '/OAuth'
