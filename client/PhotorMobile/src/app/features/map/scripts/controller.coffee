@@ -12,9 +12,8 @@ angular.module 'Photor.controllers'
     # =============================================
     # Attributes
     # =============================================
-    $scope.attrs = {
+    $scope.attrs =
       mapOptions: null
-    }
 
     # =============================================
     # Watchers
@@ -26,7 +25,7 @@ angular.module 'Photor.controllers'
     # =============================================
     # Methods
     # =============================================
-    $scope.methods = {
+    $scope.methods =
       getUserPosition: () ->
         options = { timeout: 60000, enableHighAccuracy: yes }
         $cordovaGeolocation.getCurrentPosition(options)
@@ -55,9 +54,19 @@ angular.module 'Photor.controllers'
       searchAddress: () ->
         timeoutzeroMapService.addressToLatLng($scope.attrs.address)
           .then (latLng) ->
+            $scope.attrs.lat = latLng.G
+            $scope.attrs.lng = latLng.K
             $scope.methods.addMarker(latLng)
 
-    }
+      geolocate: () ->
+        options = { timeout: 60000, enableHighAccuracy: yes }
+        $cordovaGeolocation.getCurrentPosition(options)
+          .then (position) ->
+            $scope.attrs.address = null
+            $scope.attrs.lat     = position.coords.latitude
+            $scope.attrs.lng     = position.coords.longitude
+
+            $scope.methods.addMarker(new google.maps.LatLng position.coords.latitude, position.coords.longitude)
 
     # =============================================
     # Aux Methods

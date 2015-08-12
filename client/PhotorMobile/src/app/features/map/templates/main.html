@@ -1,20 +1,38 @@
 <ion-view>
+  <ion-content class="fullscreen-container scroll-bg">
 
-  <div class="halfscreen">
-    <div ng-if="attrs.mapOptions" timeoutzero-map options="attrs.mapOptions"></div>
-  </div>
-
-  <div class="content padding fullscreen">
-    <div class="list">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Endere&ccedil;o</span>
-        <input type="text" ng-model="attrs.address" placeholder="Rua Quintana, 753, S&atilde;o Paulo - SP">
-      </label>
+    <div class="halfscreen">
+      <div ng-if="attrs.mapOptions" timeoutzero-map options="attrs.mapOptions"></div>
     </div>
 
-    <button type="button" class="button button-block button-royal" ng-click="methods.searchAddress()" ng-disabled="!attrs.address">
-      Buscar endereço
-    </button>
-  </div>
+    <div class="content padding fullscreen">
 
+      <div class="card" ng-if="attrs.lat && attrs.lng">
+        <div class="item item-divider">
+          Lat / Long
+        </div>
+        <div class="item item-text-wrap">
+          <span ng-bind="attrs.lat"></span>
+          <span>/</span>
+          <span ng-bind="attrs.lng"></span>
+        </div>
+      </div>
+
+      <div class="card" ng-if="attrs.lat && attrs.lng">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Endere&ccedil;o</span>
+          <input type="text" ng-model="attrs.address" placeholder="Rua Quintana, 753, S&atilde;o Paulo - SP">
+        </label>
+      </div>
+
+      <button type="button" class="button button-block button-light" ng-click="methods.searchAddress()" ng-disabled="!attrs.address">
+        Buscar endereço
+      </button>
+      <button type="button" class="button button-block button-light" ng-click="methods.geolocate()">
+        Geolocalizar
+      </button>
+
+    </div>
+
+  </ion-content>
 </ion-view>
