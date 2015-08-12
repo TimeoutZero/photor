@@ -11,10 +11,10 @@ angular.module 'Photor'
   .config ($stateProvider, $urlRouterProvider) ->
 
     $stateProvider
-      .state "timer",
-        url         : "/timer"
-        templateUrl : "app/features/timer/templates/main.html"
-        controller  : 'MainTimerController'
+      .state "oauth",
+        url         : "/OAuth"
+        templateUrl : "app/features/OAuth/templates/main.html"
+        controller  : 'MainOAuthController'
 
 
-    $urlRouterProvider.otherwise '/timer'
+    $urlRouterProvider.otherwise '/OAuth'

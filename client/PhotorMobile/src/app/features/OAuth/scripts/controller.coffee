@@ -5,9 +5,9 @@
 angular.module 'Photor.controllers'
 
   # =============================================
-  # MainTimerController
+  # MainOAuthController
   # =============================================
-  .controller 'MainTimerController', ($scope) ->
+  .controller 'MainOAuthController', ($scope, $cordovaOauth) ->
 
     # =============================================
     # Attributes
@@ -17,7 +17,17 @@ angular.module 'Photor.controllers'
     # =============================================
     # Methods
     # =============================================
-    $scope.methods = {}
+    $scope.methods =
+      loginWithFacebook: ->
+        success = (data) ->
+          console.log(data)
+          alert 'Uhuuuuu o/'
+
+        error = (data) ->
+          console.log(data)
+          alert '=('
+
+        $cordovaOauth.facebook("1654024714834818", ["email"]).then(success, error)
 
     # =============================================
     # Aux Methods
