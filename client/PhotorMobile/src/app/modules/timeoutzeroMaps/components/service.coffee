@@ -52,11 +52,17 @@ angular.module "timeoutzeroMap.services"
         map.fitBounds(bounds)
         map.panToBounds(bounds)
 
-      addMarker: (latLng, title) ->
+      panTo : (latLng) ->
+        map.setZoom(15)
+        map.setCenter(latLng)
+        map.panTo(latLng)
+
+      addMarker: (latLng, title, animation) ->
         markers.push new google.maps.Marker({
           position: latLng
           map: map
           title: title if title
+          animation: animation if animation
         })
 
       hideMarkers: () ->
@@ -84,6 +90,9 @@ angular.module "timeoutzeroMap.services"
 
       createLatLng : (lat, lng) ->
         return new google.maps.LatLng(lat, lng)
+
+      setEvent : (eventName, cb) ->
+        google.maps.event.addListener(map, eventName, cb)
 
     }
 
