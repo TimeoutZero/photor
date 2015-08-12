@@ -12,8 +12,9 @@ angular.module 'Photor.vendors' , [
   'ngTouch'
   'ngSanitize'
   'ngResource'
-  'ionic'
   'ngCordova'
+  'ionic'
+  'timeoutzeroMap'
 ]
 
 # =============================================
