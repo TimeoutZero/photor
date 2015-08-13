@@ -1,0 +1,22 @@
+<ion-view>
+  <ion-content class="fullscreen-container scroll-bg">
+
+    <div class="padding fullscreen">
+
+      <div class="list card" ng-if="attrs.notifications.length > 0">
+        <div class="item item-divider">
+          Notificações agendadas
+        </div>
+        <p class="item" ng-repeat="notification in attrs.notifications track by $index">
+          <b>#{{notification.id}}</b> - <span ng-bind="notification.text"></span>
+        </p>
+      </div>
+
+      <button type="button" class="button button-block button-light" ng-click="methods.scheduleNotification()">
+        Adicionar notificação
+      </button>
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,3 +1,7 @@
+<ion-header-bar align-title="left" class="bar-dark">
+  <h1 class="title">Photor</h1>
+</ion-header-bar>
+
 <ion-tabs class="tabs-icon-only tabs-dark">
   <ion-tab title="oAuth" icon-on="ion-earth" ui-sref="pocs.oauth">
     <ion-nav-view name="oAuth"></ion-nav-view>
@@ -5,5 +9,9 @@
 
   <ion-tab title="Mapa" icon-on="ion-map" ui-sref="pocs.map">
     <ion-nav-view name="map"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Notificação" icon-on="ion-android-notifications-none" ui-sref="pocs.notification" badge="$root.notificationCount">
+    <ion-nav-view name="notification"></ion-nav-view>
   </ion-tab>
 </ion-tabs>
