@@ -77,7 +77,9 @@
     {
       "locator": "https://github.com/davidpiegza/cordova-plugin-local-notifications.git",
       "id": "de.appplant.cordova.plugin.local-notification"
-    }
+    },
+    "org.apache.cordova.camera",
+    "org.apache.cordova.vibration"
   ],
   "cordovaPlatforms": [
     "ios",
