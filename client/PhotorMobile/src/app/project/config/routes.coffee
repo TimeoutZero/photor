@@ -10,4 +10,4 @@ angular.module 'Photor'
   # =============================================
   .config ($stateProvider, $urlRouterProvider) ->
 
-    $urlRouterProvider.otherwise '/pocs/OAuth'
+    $urlRouterProvider.otherwise '/intro'
