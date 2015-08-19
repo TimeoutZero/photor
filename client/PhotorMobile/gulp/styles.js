@@ -13,11 +13,18 @@ module.exports = function(options) {
       style: 'expanded'
     };
 
-    var injectFiles = gulp.src([
-      options.src + '/app/**/*.scss',
-      '!' + options.src + '/app/index.scss',
-      '!' + options.src + '/app/vendor.scss'
-    ], { read: false });
+    var injectFiles = [
+      options.src + '/app/**/*.scss'
+    ];
+
+    var excludesFromImport = options.excludes && options.excludes.stylesFromIndexImport ? options.excludes.stylesFromIndexImport : [];
+
+    injectFiles = injectFiles.concat( excludesFromImport.map(function(excludeFromImport){
+      return "!" + excludeFromImport;
+    }));
+
+    injectFiles = gulp.src(injectFiles, { read: false });
+
 
     var injectOptions = {
       transform: function(filePath) {

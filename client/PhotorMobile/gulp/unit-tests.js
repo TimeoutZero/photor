@@ -21,12 +21,7 @@ module.exports = function(options) {
       'bower_components/angular-input-masks/angular-input-masks-standalone.js'
     ]
 
-    var specFiles = [
-      options.src + '/**/*.spec.js',
-      options.tmp + '/**/*.spec.js',
-      options.src + '/**/*.mock.js',
-      options.tmp + '/**/*.mock.js'
-    ];
+    var specFiles = options.specFiles || [];
 
     var htmlFiles = [
       options.src + '/**/*.html'
