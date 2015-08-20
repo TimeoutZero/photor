@@ -1,0 +1,14 @@
+
+.photorLogo {
+  background: url('../assets/logos/logo.png') no-repeat;
+  width: 100%;
+
+  &.small {
+    background-size: contain;
+    background-position: center center;
+    height: 60px;
+    width: 120px;
+  }
+
+
+}
