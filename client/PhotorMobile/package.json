@@ -79,7 +79,11 @@
       "id": "de.appplant.cordova.plugin.local-notification"
     },
     "org.apache.cordova.camera",
-    "org.apache.cordova.vibration"
+    "org.apache.cordova.vibration",
+    {
+      "locator": "https://github.com/litehelpers/Cordova-sqlite-storage.git",
+      "id": "io.litehelpers.cordova.sqlite"
+    }
   ],
   "cordovaPlatforms": [
     "ios",
