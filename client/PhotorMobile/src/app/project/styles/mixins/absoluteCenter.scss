@@ -1,9 +1,17 @@
 @mixin absoluteCenter($width, $height) {
   position: absolute;
-  width: $width + px;
-  height: $height + px;
+  width: $width ;
+  height: $height;
   left: 50%;
   top: 50%;
-  margin-left: -($width / 2) + px;
-  margin-top: -($height / 2) + px;
+  margin-left: -($width / 2) ;
+  margin-top: -($height / 2) ;
+}
+
+@mixin hCenter($width, $height) {
+  position: absolute;
+  width: $width ;
+  height: $height;
+  left: 50%;
+  margin-left: -($width / 2) ;
 }
