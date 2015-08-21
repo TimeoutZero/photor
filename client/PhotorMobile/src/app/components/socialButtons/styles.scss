@@ -1,0 +1,40 @@
+
+.socialButton {
+  $socialButtonHeight: 50px;
+  padding: 0px 10px 0px 0px;
+  @include borderRadius(5px);
+  border: none;
+  color: #FFFFFF;
+  height: $socialButtonHeight;
+  line-height: $socialButtonHeight;
+  font-weight: 500;
+
+  // @include singleBoxShadow(#000000, 0, 0px, 7px, 0.1px);
+
+  &.foursquare {
+    background: $foursquareButtonBgColor;
+  }
+
+  &.facebook {
+    background: $facebookButtonBgColor;
+  }
+
+  &.googlePlus {
+    background: $googleButtonBgColor;
+  }
+
+  &.twitter {
+    background: $twitterButtonBgColor;
+  }
+
+  &:before {
+    font-size: 30px !important;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    line-height: $socialButtonHeight !important;
+    height: $socialButtonHeight;
+    padding-right: 0px !important;
+    width: 60px;
+    text-align: center;
+  }
+
+}
