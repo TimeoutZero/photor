@@ -16,10 +16,12 @@ angular.module 'Photor'
         url         : "/intro"
         views:
           '':
-            templateUrl : "app/features/intro/templates/main.html"
+            templateUrl : "app/features/intro/main/template.html"
             controller  : 'MainIntroController'
           'welcome@intro' :
-            templateUrl : "app/features/intro/templates/welcome.html"
+            templateUrl : "app/features/intro/welcome/template.html"
+          'social@intro' :
+            templateUrl : "app/features/intro/social/template.html"
 
 
 

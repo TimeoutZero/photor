@@ -1,8 +1,16 @@
-#welcomeView {
+.introView {
+  .introText {
+    color: #FFFFFF;
+    font-size: 16px;
+  }
 
-  > .pane {
+  &.pane {
     @extend %mainGradient;
     color: #FFFFFF;
+  }
+
+  .pane {
+    background: transparent;
   }
 
   .logoWrapper {
@@ -10,15 +18,5 @@
     width: 100%;
     height: $smallPhotorLogoHeight;
     .photorLogo.small { @include hCenter($smallPhotorLogoWidth, $smallPhotorLogoHeight);}
-  }
-
-
-  .city {
-    background: url('../assets/intro/city.png') no-repeat;
-    width: 100%;
-    height: 200px;
-    background-position: center center;
-    background-size: cover;
-
   }
 }
