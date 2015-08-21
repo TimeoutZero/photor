@@ -7,7 +7,7 @@ angular.module 'Photor.controllers'
   # =============================================
   # MainIntroController
   # =============================================
-  .controller 'MainIntroController', ($scope, $cordovaOauth) ->
+  .controller 'MainIntroController', ($scope, $cordovaOauth, $ionicSlideBoxDelegate) ->
 
     # =============================================
     # Attributes
@@ -17,7 +17,10 @@ angular.module 'Photor.controllers'
     # =============================================
     # Methods
     # =============================================
-    $scope.methods = {}
+    $scope.actions =
+      nextSlide : ->
+        currentIndex = $ionicSlideBoxDelegate.currentIndex()
+        $ionicSlideBoxDelegate.slide(currentIndex + 1)
 
     # =============================================
     # Aux Methods
