@@ -13,19 +13,37 @@
 
   &.foursquare {
     background: $foursquareButtonBgColor;
+
+    &:active, &.activated {
+      background: darken($foursquareButtonBgColor, 20%);
+    }
   }
 
   &.facebook {
     background: $facebookButtonBgColor;
+
+    &:active, &.activated {
+      background: darken($facebookButtonBgColor, 20%);
+    }
   }
 
   &.googlePlus {
     background: $googleButtonBgColor;
+
+    &:active, &.activated {
+      background: darken($googleButtonBgColor, 20%);
+    }
   }
 
   &.twitter {
     background: $twitterButtonBgColor;
+
+    &:active, &.activated {
+      background: darken($twitterButtonBgColor, 20%);
+    }
   }
+
+
 
   &:before {
     font-size: 30px !important;
