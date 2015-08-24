@@ -1,16 +1,26 @@
+
+$mapWidth: 220px;
+$mapHeight: 200px;
+
 #mapView {
-  $mapWidth: 220px;
+
+
   .mapWrapper {
     height: 200px;
+    opacity: 1;
+    @include transition(opacity, opacity, 0.3s ease-in-out);
+    @include transition(height, height, 0.3s ease-in-out);
 
     .timeoutzero-map {
+      @include transition(opacity, opacity, 0.3s ease-in-out);
       border-radius: 100%;
       width: $mapWidth;
       position: absolute;
       border: 6px solid #FFFFFF;
       left: 50%;
       margin-left: -($mapWidth / 2);
-      height: 200px;
+      height: $mapHeight;
+      opacity: 1;
     }
   }
 
@@ -40,4 +50,11 @@
     }
   }
 
+}
+
+body.keyboard-open #mapView {
+  .mapWrapper, .timeoutzero-map {
+    opacity: 0;
+    height: $mapHeight / 2;
+  }
 }
