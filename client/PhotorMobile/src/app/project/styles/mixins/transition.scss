@@ -1,0 +1,6 @@
+@mixin transition($el, $webkit-el, $attr...){
+  transition         : $el $attr;
+  -webkit-transition : $webkit-el $attr;
+  -moz-transition    : $el $attr;
+
+}

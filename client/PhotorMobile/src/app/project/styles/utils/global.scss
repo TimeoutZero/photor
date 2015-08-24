@@ -10,5 +10,8 @@
     width: 120px;
   }
 
+}
 
+.mainGradient {
+  @include linearGradient($topMainGradientColor, $bottomMainGradientColor);
 }
