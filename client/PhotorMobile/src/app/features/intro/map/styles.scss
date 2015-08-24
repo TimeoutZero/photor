@@ -1,0 +1,43 @@
+#mapView {
+  $mapWidth: 220px;
+  .mapWrapper {
+    height: 200px;
+
+    .timeoutzero-map {
+      border-radius: 100%;
+      width: $mapWidth;
+      position: absolute;
+      border: 6px solid #FFFFFF;
+      left: 50%;
+      margin-left: -($mapWidth / 2);
+      height: 200px;
+    }
+  }
+
+  .addressWrapper {
+    .addressTitle {
+      font-size: 18px;
+    }
+
+    .address {
+      font-size: 18px;
+    }
+  }
+
+
+  .actionsWrapper {
+
+    button {
+      width: 48%;
+
+      &:first-child {
+        float: left;
+      }
+
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+
+}

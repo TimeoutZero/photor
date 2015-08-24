@@ -1,0 +1,73 @@
+<div id="mapView">
+  <ion-view>
+    <ion-content class="padding-top">
+      <div class="mapWrapper margin-top">
+        <div ng-if="attrs.mapOptions" timeoutzero-map options="attrs.mapOptions"></div>
+      </div>
+
+
+      <div class="padding" ng-switch="attrs.viewMode">
+
+        <!-- Only read -->
+        <div ng-switch-when="onlyRead">
+          <div class="addressWrapper text-center">
+            <p class="addressTitle">Localizamos você em:</p>
+            <p class="address label" ng-bind="attrs.address"> Algum endereço :P</p>
+          </div>
+
+          <div class="introTextWrapper text-center margin-top">
+           <!--  <p class="introText">
+              Para uma melhor experiência, informe seu endereço de residência.
+            </p> -->
+            <p class="introText">
+              Usaremos esta informação para sermos mais acertivos ao enviar uma notificação para você.
+            </p>
+          </div>
+
+
+          <div class="actionsWrapper margin-top">
+            <button type="button"
+              class="button button-light button-outline"
+              ng-click="methods.editAdress()">
+              Corrigir
+            </button>
+            <button type="button"
+              class="button button-light icon-right ion-chevron-right"
+              ng-click="$parent.actions.nextSlide()" ng-disabled="!attrs.address">
+              Está certo
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Edit Mode -->
+        <div ng-switch-default class="margin-top">
+
+
+          <div class="row no-padding margin-top">
+            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+              <input type="text"
+                ng-model="attrs.address"
+                class="form-control phInput"
+                placeholder="Digite seu endereço">
+            </div>
+          </div>
+
+
+          <div class="actionsWrapper margin-top">
+            <button type="button" class="button button-light button-outline"
+              ng-click="methods.cancelToEditAddress()">
+              Cancelar
+            </button>
+            <button type="button" class="button button-light ion-ios-search icon-left"
+              ng-click="methods.searchAddress()" ng-disabled="!attrs.address">
+              Buscar
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </ion-content>
+  </ion-view>
+</div>

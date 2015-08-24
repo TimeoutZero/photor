@@ -22,6 +22,9 @@ angular.module 'Photor'
             templateUrl : "app/features/intro/welcome/template.html"
           'social@intro' :
             templateUrl : "app/features/intro/social/template.html"
+          'maps@intro' :
+            templateUrl : "app/features/intro/map/template.html"
+            controller  : 'IntroMapController'
 
 
 
