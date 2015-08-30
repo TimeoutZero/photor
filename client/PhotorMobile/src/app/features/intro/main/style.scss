@@ -19,4 +19,9 @@
     height: $smallPhotorLogoHeight;
     .photorLogo.small { @include hCenter($smallPhotorLogoWidth, $smallPhotorLogoHeight);}
   }
+
+
+  .nextSlideButtonWrapper {
+    padding: 0 50px;
+  }
 }

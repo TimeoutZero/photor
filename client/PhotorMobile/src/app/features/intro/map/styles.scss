@@ -8,11 +8,11 @@ $mapHeight: 200px;
   .mapWrapper {
     height: 200px;
     opacity: 1;
-    @include transition(opacity, opacity, 0.3s ease-in-out);
-    @include transition(height, height, 0.3s ease-in-out);
+    @include transition(opacity, opacity, 0.2s ease-in-out);
+    @include transition(height, height, 0.2s ease-in-out);
 
     .timeoutzero-map {
-      @include transition(opacity, opacity, 0.3s ease-in-out);
+      @include transition(opacity, opacity, 0.2s ease-in-out);
       border-radius: 100%;
       width: $mapWidth;
       position: absolute;
