@@ -25,6 +25,10 @@ angular.module 'Photor'
           'maps@intro' :
             templateUrl : "app/features/intro/map/template.html"
             controller  : 'IntroMapController'
+          'dayInDayOut@intro' :
+            templateUrl : "app/features/intro/dayInDayOut/template.html"
+            controller  : 'IntroDayInDayOutController'
+
 
 
 
