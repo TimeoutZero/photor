@@ -1,0 +1,29 @@
+.daysInputWrapper {
+  width: 100%;
+  $dayWrapperHeight: 35px;
+
+  .dayWrapper {
+    height: $dayWrapperHeight;
+    width: $dayWrapperHeight;
+    line-height: $dayWrapperHeight;
+    margin-right: 7px;
+    background: transparent;
+    @include borderRadius(100px);
+    @include transition(background, background, 0.1s ease-in-out);
+
+    &.active {
+      background: #FFFFFF;
+      color: $topMainGradientColor;
+    }
+
+
+    .dayCheck {
+      display: none;
+    }
+
+    .dayLabel{
+
+    }
+  }
+
+}
