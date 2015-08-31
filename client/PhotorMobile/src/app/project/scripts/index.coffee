@@ -14,6 +14,8 @@ angular.module 'Photor.vendors' , [
   'ngResource'
   'ngCordova'
   'ionic'
+  'tabSlideBox'
+  'tabSlideBoxScrollExtension'
   'timeoutzeroMap'
 ]
 

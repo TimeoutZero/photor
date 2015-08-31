@@ -1,0 +1,27 @@
+
+<ion-view class="mainActivity">
+
+  <div ph-main-header></div>
+
+  <ion-content class="has-header">
+
+    <tab-slide-box >
+      <div class="tsb-icons">
+        <div class="tsb-ic-wrp">
+          <ion-scroll direction="x" class="tsb-hscroll scroll-view ionic-scroll">
+            <a ng-bind=" 'Notificações' | uppercase"></a>
+            <a ng-bind=" 'Eventos' | uppercase"></a>
+          </ion-scroll>
+        </div>
+      </div>
+      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <h1>Home content</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Events content</h1>
+        </ion-slide>
+      </ion-slide-box>
+    </tab-slide-box>
+  </ion-content>
+</ion-view>

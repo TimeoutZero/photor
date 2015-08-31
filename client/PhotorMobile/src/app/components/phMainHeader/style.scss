@@ -1,0 +1,15 @@
+
+.phMainHeader {
+  background-color: $mainHeaderBg ;
+  color: #FFFFFF;
+
+  h1, .bar .title {
+    color: #FFFFFF;
+    text-align: left !important;
+  }
+
+  .ion-android-more-vertical {
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+}

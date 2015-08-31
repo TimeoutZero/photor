@@ -1,0 +1,46 @@
+.mainActivity {
+  $navFontSize: 14px;
+  background: #6D0085;
+
+  .tabbed-slidebox {
+
+    .tsb-icons {
+      background: transparent ;
+      border-bottom: 1px solid rgba(#FFFFFF, 0.5);
+
+      &:after {
+        content: none;
+      }
+
+      a {
+        color: rgba(#FFFFFF, 0.5);
+        font-size: $navFontSize;
+        border-bottom: 2px solid transparent;
+        -webkit-transform: translate3d(0,0,0);
+        padding-bottom: 3px;
+
+        &.active {
+          color: #FFFFFF;
+          font-size: $navFontSize;
+          border-bottom: 2px solid #FFFFFF;
+        }
+      }
+    }
+
+    .slider-slide {
+      padding-top: 10px;
+      color: #FFFFFF;
+      background-color: transparent;
+      text-align: center;
+      font-weight: inherit;
+    }
+
+  }
+
+  .scroll {
+    height: 100%;
+
+  }
+
+
+}
