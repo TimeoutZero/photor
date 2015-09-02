@@ -1,11 +1,12 @@
 #welcomeView {
 
   .city {
-    background: url('../assets/intro/city.png') no-repeat;
-    width: 100%;
-    height: 157px;
-    background-position: center center;
-    background-size: cover;
+    background-image    : url('../assets/intro/city.png'), url('../assets/intro/horizontal_line.png'), url('../assets/intro/vertical_line.png');
+    background-repeat   : repeat-x, no-repeat, no-repeat;
+    width               : 100%;
+    height              : 253px;
+    background-position : center 10px, right 175px, center 175px;
+    background-size     : 500px 120px, 250px 4px, 30px 77px;
 
   }
 
