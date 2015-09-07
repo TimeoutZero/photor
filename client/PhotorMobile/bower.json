@@ -4,7 +4,7 @@
   "dependencies": {
     "ionic": "driftyco/ionic-bower#1.0.1",
     "tabbedSlideBox": "saravmajestic/ionic",
-    "tabbedSlideBoxExtension" : "wataruoguchi/Ionic-Tabbed-Slidebox-Scroll-Extension",
+    "tabbedSlideBoxExtension": "wataruoguchi/Ionic-Tabbed-Slidebox-Scroll-Extension",
     "underscore": "~1.8.3",
     "angular-animate": "~1.3.4",
     "angular-cookies": "~1.3.4",
@@ -37,7 +37,8 @@
   },
   "resolutions": {
     "jquery": "~1.11.1",
-    "angular": "1.3.17",
-    "messageformat": "~0.2.2"
+    "angular": "~1.3.4",
+    "messageformat": "~0.2.2",
+    "angular-ui-router": "~0.2.15"
   }
 }
