@@ -12,6 +12,10 @@
 
 }
 
+.hideOnSmallDevice {
+  display : none;
+}
+
 .mainGradient {
   @include linearGradient($topMainGradientColor, $bottomMainGradientColor);
 }
