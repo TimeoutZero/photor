@@ -1,13 +1,31 @@
 #welcomeView {
 
   .city {
-    background-image    : url('../assets/intro/city.png'), url('../assets/intro/horizontal_line.png'), url('../assets/intro/vertical_line.png');
-    background-repeat   : repeat-x, no-repeat, no-repeat;
+    background          : url('../assets/intro/city.png') repeat-x;
+    background-size     : auto 100%;
+    background-position : center center;
+    height              : 100px;
     width               : 100%;
-    height              : 253px;
-    background-position : center 10px, right 175px, center 175px;
-    background-size     : 500px 120px, 250px 4px, 30px 77px;
+  }
 
+  .horizontal-line {
+    background : url('../assets/intro/horizontal_line.png') repeat-x;
+    background-size     : auto 100%;
+    background-position : left center;
+    height              : 3px;
+    left                : 50%;
+    margin-bottom       : 3px;
+    margin-top          : 20px;
+    position            : relative;
+    width               : 100%;
+  }
+
+  .vertical-line {
+    background : url('../assets/intro/vertical_line.png') no-repeat;
+    background-size     : auto 100%;
+    background-position : center center;
+    height              : 60px;
+    width               : 100%;
   }
 
 }
