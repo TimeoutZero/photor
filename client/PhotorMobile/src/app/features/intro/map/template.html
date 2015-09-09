@@ -2,7 +2,8 @@
   <ion-view>
     <ion-content class="padding-top">
       <div class="mapWrapper margin-top">
-        <div ng-if="attrs.mapOptions" timeoutzero-map options="attrs.mapOptions"></div>
+        <!-- <div ng-if="attrs.mapOptions" timeoutzero-map options="attrs.mapOptions"></div> -->
+        <img class="timeoutzero-map" src="{{attrs.mapUrl}}" />
       </div>
 
 
@@ -12,7 +13,7 @@
         <div ng-switch-when="onlyRead">
           <div class="addressWrapper text-center">
             <p class="addressTitle">Localizamos você em:</p>
-            <p class="address label" ng-bind="attrs.address"> Algum endereço :P</p>
+            <p class="address label" ng-bind="attrs.address"></p>
           </div>
 
           <div class="introTextWrapper text-center margin-top">

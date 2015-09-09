@@ -1,13 +1,13 @@
 
-$mapWidth: 220px;
+$mapWidth: 200px;
 $mapHeight: 200px;
 
 #mapView {
 
 
   .mapWrapper {
-    height: 200px;
     opacity: 1;
+    text-align : center;
     @include transition(opacity, opacity, 0.2s ease-in-out);
     @include transition(height, height, 0.2s ease-in-out);
 
@@ -15,10 +15,8 @@ $mapHeight: 200px;
       @include transition(opacity, opacity, 0.2s ease-in-out);
       border-radius: 100%;
       width: $mapWidth;
-      position: absolute;
+      position: relative;
       border: 6px solid #FFFFFF;
-      left: 50%;
-      margin-left: -($mapWidth / 2);
       height: $mapHeight;
       opacity: 1;
     }
@@ -31,6 +29,10 @@ $mapHeight: 200px;
 
     .address {
       font-size: 18px;
+
+      label {
+        white-space: initial;
+      }
     }
   }
 

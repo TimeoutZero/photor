@@ -13,6 +13,9 @@ angular.module "timeoutzeroMap.services"
       directionsService  : directionsService
       directionsRenderer : directionsRenderer
 
+      staticMap: (lat, lng, size) ->
+        return "https://maps.googleapis.com/maps/api/staticmap?markers=#{lat},#{lng}&size=#{size}x#{size}"
+
       registerMap: (mapInstance) ->
         map = mapInstance
         $rootScope.$broadcast 'timeoutzeroMapService:mapRegistered'
@@ -76,6 +79,18 @@ angular.module "timeoutzeroMap.services"
       removeMarkers: () ->
         @hideMarkers()
         markers = []
+
+      latLngToAddress : (lat, lng) ->
+        deferred = $q.defer()
+        latLng = {lat: lat, lng: lng}
+        geocoder.geocode {'location': latLng}, (results, status) ->
+          if status is google.maps.GeocoderStatus.OK
+            address = results[0].formatted_address
+            deferred.resolve address
+          else
+            deferred.reject 'exception.timeoutzeroMap.latLngToAddress'
+
+        return deferred.promise
 
       addressToLatLng : (address) ->
         deferred = $q.defer()
